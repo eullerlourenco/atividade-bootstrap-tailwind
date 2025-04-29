@@ -1,0 +1,15 @@
+
+.carousel-cover {
+    max-height: 80vh;
+    object-fit: cover;
+  }
+
+.position-bottom {
+    object-position: bottom;
+}
+.position-center {
+    object-position: center;
+}
+.position-top {
+    object-position: top;
+}
