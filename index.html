@@ -36,20 +36,20 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
+                <a class="nav-link" href="#contact">Contato</a>
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Conteúdo
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Filmes</a></li>
+                Conteúdo
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Filmes</a></li>
                   <li><a class="dropdown-item" href="#">Séries</a></li>
                   <li><a class="dropdown-item" href="#">Documentarios</a></li>
                   <li><hr class="dropdown-divider" /></li>
@@ -57,6 +57,12 @@
                     <a class="dropdown-item" href="#">Todos Genêros</a>
                   </li>
                 </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/tailwind.html">Tailwind</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/outros-componentes.html">Outros componentes</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -75,8 +81,21 @@
       </nav>
     </header>
 
+    <!-- breadcrumbs -->
+    <section class="container mt-3">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item active" aria-current="page">Home</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </section>
+
     <!-- carousel -->
-    <section class="container-fluid px-2 px-md-4 py-3">
+    <section class="container-fluid px-2 px-md-4 pb-3">
       <div
         id="carouselExampleAutoplaying"
         class="carousel slide"
@@ -107,21 +126,21 @@
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="5000">
             <img
-              src="https://ntvb.tmsimg.com/assets/p28828_v_h8_ac.jpg?w=960&h=540"
+              src="/imgs/filmes/senhor-dos-aneis.jpg"
               class="d-block w-100 carousel-cover position-bottom"
               alt="Senhor dos aneis"
             />
           </div>
           <div class="carousel-item" data-bs-interval="5000">
             <img
-              src="https://theartycrowd.ca/wp-content/uploads/2023/08/65605.jpg"
+              src="/imgs/filmes/de-volta-para-o-futuro.jpg"
               class="d-block w-100 carousel-cover position-top"
               alt="De volta para o Futuro"
             />
           </div>
           <div class="carousel-item" data-bs-interval="5000">
             <img
-              src="https://pbs.twimg.com/ext_tw_video_thumb/1506671264378802184/pu/img/YHdbNz-1IYePtXEG.jpg:large"
+              src="/imgs/filmes/poderoso-chefao.jpg"
               class="d-block w-100 carousel-cover"
               alt="Poderoso Chefão"
             />
@@ -152,7 +171,111 @@
     <section class="container my-5">
       <div class="row">
         <div class="col-12 mb-4">
-          <h1>Filmes</h1>
+          <div class="d-flex align-items-center">
+            <h1>Filmes</h1>
+            <!-- offcanvas -->
+            <div class="ms-auto">
+              <a
+                class="btn btn-danger"
+                data-bs-toggle="offcanvas"
+                href="#filmesPopulares"
+                role="button"
+                aria-controls="filmesPopulares"
+              >
+                Populares
+              </a>
+            </div>
+            <!-- offcanvas -->
+            <div
+              class="offcanvas offcanvas-start"
+              tabindex="-1"
+              id="filmesPopulares"
+              aria-labelledby="filmesPopularesLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="filmesPopularesLabel">
+                  Filmes mais Populares
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" class="text-decoration-none"
+                      >O Poderoso Chefão (1972)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none"
+                      >Clube da Luta (1999)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none"
+                      >Interestelar (2014)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none">A Origem (2010)</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none"
+                      >Pulp Fiction: Tempo de Violência (1994)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none"
+                      >Forrest Gump: O Contador de Histórias (1994)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none"
+                      >Os Bons Companheiros (1990)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none">Matrix (1999)</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none">Coringa (2019)</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none"
+                      >O Senhor dos Anéis: O Retorno do Rei (2003)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none">Parasita (2019)</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none"
+                      >Batman: O Cavaleiro das Trevas (2008)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none"
+                      >O Grande Hotel Budapeste (2014)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none"
+                      >La La Land: Cantando Estações (2016)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none"
+                      >O Lobo de Wall Street (2013)</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
           <p class="text-muted">Os melhores filmes para você assistir</p>
           <hr />
         </div>
@@ -162,14 +285,35 @@
         <div class="col mb-3 mb-3">
           <div class="card">
             <img
-              src="https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_.jpg"
+              src="/imgs/filmes/interestelar.jpg"
               class="card-img-top card-cover position-top"
               alt="Interestelar"
             />
             <div class="card-body">
               <h5 class="card-title">Interestelar</h5>
-              <div class="text-end">
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  class="btn btn-primary rounded-5"
+                  data-bs-toggle="collapse"
+                  href="#collapse1"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  Sinopse
+                </a>
                 <a href="#" class="btn btn-success rounded-5">Ver mais...</a>
+              </div>
+              <div class="collapse my-2" id="collapse1">
+                <div>
+                  As reservas naturais da Terra estão chegando ao fim e um grupo
+                  de astronautas recebe a missão de verificar possíveis planetas
+                  para receberem a população mundial, possibilitando a
+                  continuação da espécie. Cooper é chamado para liderar o grupo
+                  e aceita a missão sabendo que pode nunca mais ver os filhos.
+                  Ao lado de Brand, Jenkins e Doyle, ele seguirá em busca de um
+                  novo lar.
+                </div>
               </div>
             </div>
           </div>
@@ -178,14 +322,34 @@
         <div class="col mb-3">
           <div class="card">
             <img
-              src="https://m.media-amazon.com/images/I/61sNuDFJlWL._AC_UF894,1000_QL80_.jpg"
+              src="/imgs/filmes/clube-da-luta.jpg"
               class="card-img-top card-cover position-center"
               alt="Clube da Luta"
             />
             <div class="card-body">
               <h5 class="card-title">Clube da Luta</h5>
-              <div class="text-end">
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  class="btn btn-primary rounded-5"
+                  data-bs-toggle="collapse"
+                  href="#collapse2"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  Sinopse
+                </a>
                 <a href="#" class="btn btn-success rounded-5">Ver mais...</a>
+              </div>
+              <div class="collapse my-2" id="collapse2">
+                <div>
+                  Um homem deprimido que sofre de insônia conhece um estranho
+                  vendedor chamado Tyler Durden e se vê morando em uma casa suja
+                  depois que seu perfeito apartamento é destruído. A dupla forma
+                  um clube com regras rígidas onde homens lutam. A parceria
+                  perfeita é comprometida quando uma mulher, Marla, atrai a
+                  atenção de Tyler.
+                </div>
               </div>
             </div>
           </div>
@@ -194,14 +358,33 @@
         <div class="col mb-3">
           <div class="card">
             <img
-              src="https://i.scdn.co/image/ab67616d00001e022a307d64201d08144f68cc49"
+              src="/imgs/filmes/la-la-land.jpg"
               class="card-img-top card-cover position-center"
               alt="La La Land"
             />
             <div class="card-body">
               <h5 class="card-title">La La Land</h5>
-              <div class="text-end">
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  class="btn btn-primary rounded-5"
+                  data-bs-toggle="collapse"
+                  href="#collapse3"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  Sinopse
+                </a>
                 <a href="#" class="btn btn-success rounded-5">Ver mais...</a>
+              </div>
+              <div class="collapse my-2" id="collapse3">
+                <div>
+                  O pianista Sebastian conhece a atriz Mia, e os dois se
+                  apaixonam perdidamente. Em busca de oportunidades para suas
+                  carreiras na competitiva Los Angeles, os jovens tentam fazer o
+                  relacionamento amoroso dar certo, enquanto perseguem fama e
+                  sucesso.
+                </div>
               </div>
             </div>
           </div>
@@ -210,14 +393,33 @@
         <div class="col mb-3">
           <div class="card">
             <img
-              src="https://m.media-amazon.com/images/S/pv-target-images/ce07ed05d35285b501404783eba6d9d8cfe0ccc7190831d02ee4304f5d17182e.jpg"
+              src="/imgs/filmes/top-gun-maverick.jpg"
               class="card-img-top card-cover position-center"
               alt="Top Gun: Maverick"
             />
             <div class="card-body">
               <h5 class="card-title">Top Gun: Maverick</h5>
-              <div class="text-end">
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  class="btn btn-primary rounded-5"
+                  data-bs-toggle="collapse"
+                  href="#collapse4"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  Sinopse
+                </a>
                 <a href="#" class="btn btn-success rounded-5">Ver mais...</a>
+              </div>
+              <div class="collapse my-2" id="collapse4">
+                <div>
+                  Depois de mais de 30 anos de serviço como um dos principais
+                  aviadores da Marinha, Pete "Maverick" Mitchell está de volta,
+                  rompendo os limites como um piloto de testes corajoso. No
+                  mundo contemporâneo das guerras tecnológicas, Maverick
+                  enfrenta drones e prova que o fator humano ainda é essencial.
+                </div>
               </div>
             </div>
           </div>
@@ -226,14 +428,31 @@
         <div class="col mb-3">
           <div class="card">
             <img
-              src="https://m.media-amazon.com/images/I/71NPmBOdq7L.jpg"
+              src="/imgs/filmes/blade-runner-2049.jpg"
               class="card-img-top card-cover position-center"
               alt="Blade Runner 2049"
             />
             <div class="card-body">
               <h5 class="card-title">Blade Runner 2049</h5>
-              <div class="text-end">
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  class="btn btn-primary rounded-5"
+                  data-bs-toggle="collapse"
+                  href="#collapse5"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  Sinopse
+                </a>
                 <a href="#" class="btn btn-success rounded-5">Ver mais...</a>
+              </div>
+              <div class="collapse my-2" id="collapse5">
+                <div>
+                  Após descobrir um segredo que ameaça o que resta da sociedade,
+                  um novo policial parte em busca de Rick Deckard, desaparecido
+                  há 30 anos.
+                </div>
               </div>
             </div>
           </div>
@@ -242,14 +461,32 @@
         <div class="col mb-3">
           <div class="card">
             <img
-              src="https://upload.wikimedia.org/wikipedia/en/f/ff/The_Batman_%28film%29_poster.jpg"
+              src="/imgs/filmes/the-batman.jpg"
               class="card-img-top card-cover position-center"
               alt="The Batman"
             />
             <div class="card-body">
               <h5 class="card-title">The Batman</h5>
-              <div class="text-end">
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  class="btn btn-primary rounded-5"
+                  data-bs-toggle="collapse"
+                  href="#collapse6"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  Sinopse
+                </a>
                 <a href="#" class="btn btn-success rounded-5">Ver mais...</a>
+              </div>
+              <div class="collapse my-2" id="collapse6">
+                <div>
+                  Após dois anos espreitando as ruas como Batman, Bruce Wayne se
+                  encontra nas profundezas mais sombrias de Gotham City. Com
+                  poucos aliados confiáveis, o vigilante solitário se estabelece
+                  como a personificação da vingança para a população.
+                </div>
               </div>
             </div>
           </div>
@@ -258,14 +495,36 @@
         <div class="col mb-3">
           <div class="card">
             <img
-              src="https://m.media-amazon.com/images/I/51TgWDAeqqL._AC_SL1000_.jpg"
+              src="/imgs/filmes/scarface.jpg"
               class="card-img-top card-cover position-top"
               alt="Scarface"
             />
             <div class="card-body">
               <h5 class="card-title">Scarface</h5>
-              <div class="text-end">
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  class="btn btn-primary rounded-5"
+                  data-bs-toggle="collapse"
+                  href="#collapse7"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  Sinopse
+                </a>
                 <a href="#" class="btn btn-success rounded-5">Ver mais...</a>
+              </div>
+              <div class="collapse my-2" id="collapse7">
+                <div>
+                  Após receber residência permanente nos Estados Unidos em troca
+                  do assassinato de um oficial do governo cubano, Tony Montana
+                  se torna o chefe do tráfico de drogas em Miami. Matando
+                  qualquer um que entre em seu caminho, Tony eventualmente se
+                  torna o maior traficante da Flórida, controlando quase toda a
+                  cocaína que entra em Miami. Porém, a pressão da polícia, as
+                  guerras com cartéis colombianos e sua própria paranoia servem
+                  para alimentar as chamas de sua eventual queda.
+                </div>
               </div>
             </div>
           </div>
@@ -329,7 +588,7 @@
             <a
               href="#"
               data-bs-toggle="tooltip"
-              data-bs-title="Formulário de contato"
+              data-bs-title="Pelo formulário de contato"
               >mensagem</a
             >.
           </p>
@@ -340,8 +599,10 @@
             data-bs-toggle="modal"
             data-bs-target="#contactModal"
           >
-            Enviar mensagem
+            Criar mensagem
           </button>
+          <!-- alert -->
+          <div id="liveAlertPlaceholder"></div>
           <!-- Modal -->
           <div
             class="modal fade"
@@ -349,6 +610,7 @@
             tabindex="-1"
             aria-labelledby="contactModalLabel"
             aria-hidden="true"
+            data-bs-backdrop="static"
           >
             <div class="modal-dialog">
               <div class="modal-content">
@@ -395,7 +657,11 @@
                   </form>
                 </div>
                 <div class="modal-footer">
-                  <a class="btn btn-secondary" data-bs-dismiss="modal">
+                  <a
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                    id="liveAlertBtn"
+                  >
                     Cancelar
                   </a>
                   <button
@@ -438,10 +704,21 @@
         </div>
         <div class="col-md-5">
           <img
-            src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg"
+            src="/imgs/equipe.jpeg"
             class="img-fluid rounded-5 border-start border-5 border-success"
             alt="Equipe"
           />
+          <div class="text-end">
+            <button
+            type="button"
+            class="btn btn-lg btn-light mt-3 rounded-pill"
+            data-bs-toggle="popover"
+            data-bs-title="Equipe MídiaZ!"
+            data-bs-content="A equipe do MídiaZ é composta por apaixonados por cinema e séries, sempre prontos para trazer as melhores recomendações e novidades do mundo do entretenimento. Estamos aqui para ajudar você a encontrar o que há de melhor no universo cinematográfico!"
+          >
+            #EquipeMídiaZ
+          </button>
+          </div>
         </div>
       </div>
     </section>
