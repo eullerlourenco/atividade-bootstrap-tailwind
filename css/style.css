@@ -13,3 +13,9 @@
 .position-top {
     object-position: top;
 }
+
+.card-cover {
+    max-height: 250px;
+    height: 250px;
+    object-fit: cover;
+}
